@@ -7,10 +7,7 @@
 import { inject } from 'vue';
 import { authorKey, type AuthorInterface } from './App.vue';
 
-const { author, updateBirthday } =
-  inject<Readonly<{ data: AuthorInterface; updateBirthday: () => void }>>(
-    'author'
-  )!;
+const { author, updateBirthday } = inject(authorKey)!;
 const api = inject('API_URL');
 
 setTimeout(() => {
