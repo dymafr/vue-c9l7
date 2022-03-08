@@ -5,6 +5,13 @@
   </div>
 </template>
 
+<script lang="ts">
+export const authorKey = Symbol() as InjectionKey<{
+  data: AuthorInterface;
+  updateBirthday: () => void;
+}>;
+</script>
+
 <script setup lang="ts">
 import { provide, reactive, readonly, InjectionKey } from 'vue';
 import Blog from './Blog.vue';
@@ -18,11 +25,6 @@ const author = reactive({
   name: 'Chateaubriand',
   birthdate: 1768,
 });
-
-const authorKey = Symbol() as InjectionKey<{
-  data: AuthorInterface;
-  updateBirthday: () => void;
-}>;
 
 function updateBirthday() {
   author.birthdate = 2000;

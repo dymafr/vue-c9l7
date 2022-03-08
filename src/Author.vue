@@ -5,7 +5,7 @@
 
 <script setup lang="ts">
 import { inject } from 'vue';
-import { AuthorInterface } from './App.vue';
+import { authorKey, type AuthorInterface } from './App.vue';
 
 const { author, updateBirthday } =
   inject<Readonly<{ data: AuthorInterface; updateBirthday: () => void }>>(
