@@ -21,7 +21,7 @@ const author = reactive({
 
 const authorKey = Symbol() as InjectionKey<{
   data: AuthorInterface;
-  updateBirthday: () => void);
+  updateBirthday: () => void;
 }>;
 
 function updateBirthday() {
