@@ -6,7 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import { provide, reactive, readonly, InjectionKey } from 'vue';
+import { provide, reactive, readonly } from 'vue';
+import { authorKey } from './provideKeys.ts';
 import Blog from './Blog.vue';
 
 export interface AuthorInterface {
@@ -23,7 +24,7 @@ function updateBirthday() {
   author.birthdate = 2000;
 }
 
-provide('author', readonly({ author, updateBirthday }));
+provide(authorKey, readonly({ author, updateBirthday }));
 </script>
 
 <style scoped lang="scss"></style>
