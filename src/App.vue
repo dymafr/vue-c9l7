@@ -10,11 +10,6 @@ import { provide, reactive, readonly } from 'vue';
 import { authorKey } from './provideKeys.ts';
 import Blog from './Blog.vue';
 
-export interface AuthorInterface {
-  author: string;
-  birthdate: number;
-}
-
 const author = reactive({
   name: 'Chateaubriand',
   birthdate: 1768,
