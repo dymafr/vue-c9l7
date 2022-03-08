@@ -5,13 +5,6 @@
   </div>
 </template>
 
-<script lang="ts">
-export const authorKey = Symbol() as InjectionKey<{
-  data: AuthorInterface;
-  updateBirthday: () => void;
-}>;
-</script>
-
 <script setup lang="ts">
 import { provide, reactive, readonly, InjectionKey } from 'vue';
 import Blog from './Blog.vue';

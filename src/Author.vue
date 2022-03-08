@@ -5,7 +5,7 @@
 
 <script setup lang="ts">
 import { inject } from 'vue';
-import { authorKey, type AuthorInterface } from './App.vue';
+import { authorKey } from './provideKeys.ts';
 
 const { author, updateBirthday } = inject(authorKey)!;
 const api = inject('API_URL');
